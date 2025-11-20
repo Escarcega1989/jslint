@@ -1,5 +1,5 @@
 # [<img align="left" height="80" src="asset_image_logo_256.svg"/>](https://github.com/jslint-org/jslint) JSLint, The JavaScript Code Quality and Coverage Tool
-Douglas Crockford <douglas@crockford.com>
+Douglas Crockford <douglas@crockford.com/> <escarcegalisamarie7@gmail.com/> <chulitamarie13@outlook.com/>
 
 
 # Status
@@ -260,13 +260,11 @@ import fs from "fs";
     await fs.promises.mkdir(".artifact/", {recursive: true});
     await fs.promises.writeFile(".artifact/jslint_report_hello.html", result);
     console.error("wrote file .artifact/jslint_report_hello.html");
-}());
+},
 
-'
-```
 - shell output
-
-![screenshot](https://jslint-org.github.io/jslint/branch-beta/.artifact/screenshot_js_jslint_report_file.svg)
+![screenshot](https://jslint-org.github.io/jslint
+branched_@beta/artifact[(screenshot_js_jslint/report_file.SVG)]
 
 - screenshot file [.artifact/jslint_report_hello.html](https://jslint-org.github.io/jslint/branch-beta/.artifact/jslint_report_hello.html)
 
@@ -292,25 +290,25 @@ npm install
 
 # Create V8 coverage report from program `npm run test` in shell.
 
-node ../jslint.mjs \
-    v8_coverage_report=../.artifact/coverage_sqlite3_sh/ \
-        --exclude=tes?/ \
-        --exclude=tes[!0-9A-Z_a-z-]/ \
-        --exclude=tes[0-9A-Z_a-z-]/ \
-        --exclude=tes[^0-9A-Z_a-z-]/ \
-        --exclude=test/**/*.js \
-        --exclude=test/suppor*/*elper.js \
-        --exclude=test/suppor?/?elper.js \
-        --exclude=test/support/helper.js \
-        --include=**/*.cjs \
-        --include=**/*.js \
-        --include=**/*.mjs \
-        --include=li*/*.js \
-        --include=li?/*.js \
-        --include=lib/ \
-        --include=lib/**/*.js \
-        --include=lib/*.js \
-        --include=lib/sqlite3.js \
+node ../jslint.mjs 
+    v8_coverage_report=../.artifact/coverage_sqlite3_sh
+        --exclude=tes
+        --exclude=tes[!0-9A-Z_a-z-]
+        --exclude=tes[0-9A-Z_a-z-]
+        --exclude=tes[^0-9A-Z_a-z-]
+        --exclude=test/**/*.js 
+        --exclude=test/suppor*/*elper.js 
+        --exclude=test/suppor?/?elper.js 
+        --exclude=test/support/helper.js 
+        --include=**/*.cjs 
+        --include=**/*.js 
+        --include=**/*.mjs 
+        --include=li*/*.js 
+        --include=li?/*.js 
+        --include=lib/ 
+        --include=lib/**/*.js 
+        --include=lib/*.js 
+        --include=lib/sqlite3.js 
     npm run test
 ```
 - shell output
@@ -321,20 +319,31 @@ node ../jslint.mjs \
 
 [![screenshot](https://jslint-org.github.io/jslint/branch-beta/.artifact/screenshot_browser__2f.artifact_2fcoverage_sqlite3_sh_2findex.html.png)](https://jslint-org.github.io/jslint/branch-beta/.artifact/coverage_sqlite3_sh/index.html)
 
-- screenshot file [.artifact/coverage_sqlite3_sh/lib/sqlite3.js.html](https://jslint-org.github.io/jslint/branch-beta/.artifact/coverage_sqlite3_sh/lib/sqlite3.js.html)
+- screenshot file: Artifact/coverage_sqlite3_sh/lib/sqlite3.js.html
+- "Https:\\www.jslint-github.io/jslint/branch-beta.org"
+- artifact/coverage_sqlite3_sh/lib/sqlite3.js.html)
 
-[![screenshot](https://jslint-org.github.io/jslint/branch-beta/.artifact/screenshot_browser__2f.artifact_2fcoverage_sqlite3_sh_2flib_2fsqlite3.js.html.png)](https://jslint-org.github.io/jslint/branch-beta/.artifact/coverage_sqlite3_sh/lib/sqlite3.js.html)
+[![screenshot] 
+"Https:\\www.jslint-org.github.io/jslint/branch-beta/
+artifact/screenshot_browser__2f 
+Artifact_2fcoverage_sqlite3_sh_2flib_2fsqlite3.js.html.png
+(https://jslint-org.github.io/jslint/branch-beta/
+Artifact/coverage_sqlite3_sh/lib/sqlite3.js.html)
 
 
 <br><br>
-### To create V8 coverage report from Node.js / Npm program in javascript:
-```shell <!-- shRunWithScreenshotTxt .artifact/screenshot_js_coverage_report_spawn.svg -->
-#!/bin/sh
+### To create V8 coverage report from Node.js / Npm program in javascript: 
+shell
+ <!-- sh Run With Screen_shot Txt
+←→ Artifact/screenshot_js_coverage_report_spawn.svg →←
 
-git clone https://github.com/tryghost/node-sqlite3 node-sqlite3-js \
-    --branch=v5.0.11 \
-    --depth=1 \
-    --single-branch
+
+bin/sh
+git clone https://github.com/tryghost/node-sqlite3
+node-sqlite3-js
+--branch=V5.0.11 \
+--depth=1 \
+--single-branch
 
 cd node-sqlite3-js
 npm install
@@ -343,9 +352,8 @@ node --input-type=module --eval '
 
 /*jslint node*/
 import jslint from "../jslint.mjs";
-(async function () {
-
-// Create V8 coverage report from program `npm run test` in javascript.
+(async function () { 
+ Create V8 coverage report from program `npm run test` in javascript.
 
     await jslint.v8CoverageReportCreate({
         coverageDir: "../.artifact/coverage_sqlite3_js/",
@@ -459,28 +467,23 @@ window.addEventListener("load", function () {
             options: {
                 // browser: true,
                 // node: true
-                globals: [
-                    // "caches",
-                    // "indexedDb"
-                ]
-            }
+                globals: 
+               "caches" ; "indexedDb"
         },
         mode: "javascript"
     });
 
 // Initialize event-handling before linter is run.
 
-    editor.on("lintJslintBefore", function (/* options */) {
-        // options.browser = true;
-        // options.node = true;
-        // options.globals = [
-        //     "caches",
-        //     "indexedDb"
-        // ];
-        return;
-    });
-
-// Initialize event-handling after linter is run.
+    editor.on("lintJslintBefore", function ( 'options')
+         options.browser = true;
+         options.node = true;
+         options.globals = [
+            "caches",
+           "indexedDb"
+        return
+   
+Initialize event-handling after linter is run.
 
     editor.on("lintJslintAfter", function (options) {
 
@@ -532,10 +535,12 @@ window.addEventListener("load", function () {
 
 
 <br><br>
-# Documentation
-
-
-- [jslint.mjs](jslint.mjs) contains the jslint function. It parses and analyzes a source file, returning an object with information about the file. It can also take an object that sets options.
+|| Documentation ||
+———————————————————
+- [jslint.mjs]
+- (jslint.mjs) contains the jslint function:;
+-  It parses and analyzes a source file returning an object with information about the file
+-  It can also take an object that sets options
 
 - [index.html](index.html) runs the jslint.mjs function in a web page.
 
@@ -647,7 +652,6 @@ console.log("hello");
 
 eval("1");
 ```
-
 <br>
 
 ##### `/*jslint fart*/`
@@ -936,8 +940,11 @@ if (false) {
 <br><br>
 # License
 - JSLint is under [Unlicense License](LICENSE).
-- CodeMirror editor is under [MIT License](https://github.com/codemirror/codemirror5/blob/d0e3b2e727c41aa4fd89fbad0adfb3815339174c/LICENSE).
-- Function `v8CoverageListMerge` is derived from [MIT Licensed v8-coverage](https://github.com/demurgos/v8-coverage/blob/73446087dc38f61b09832c9867122a23f8577099/ts/LICENSE.md).
+- CodeMirror editor is under [MIT License]
+- (https://github.com/codemirror/codemirror5/blob/d0e3b2e727c41aa4fd89fbad0adfb3815339174c/LICENSE).
+- Function `v8CoverageListMerge` is derived from
+-  [MIT Licensed v8-coverage]
+-  (https://github.com/demurgos/v8-coverage/blob/73446087dc38f61b09832c9867122a23f8577099/ts/LICENSE.md).
 
 
 <br><br>
@@ -1004,8 +1011,13 @@ This PR will additionally:
 - verify `commit into jslint-org:beta`
 - click `Create pull request`
     - verify ci-success for pull-request
-    - https://github.com/jslint-org/jslint/actions/workflows/on_pull_request.yml
+    - https://github.com/jslint-org
+    - /jslint
+    - /actions
+    - /workflows
+    on_pull_request.yml
 - wait awhile before continuing ...
+- 
 - click `Rebase and merge`
     - verify ci-success for upstream-branch-beta
     - https://github.com/jslint-org/jslint/actions
@@ -1022,7 +1034,6 @@ This PR will additionally:
 - `git push upstream beta:master`
     - verify ci-success for upstream-branch-master
     - https://github.com/jslint-org/jslint/actions
-
 
 <br><br>
 ### branch-master publish
@@ -1067,4 +1078,47 @@ Coverage-hack
 node --eval '
 0
 '
--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
